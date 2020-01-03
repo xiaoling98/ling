@@ -1,24 +1,25 @@
 # ling
 
-## Project setup
+## 1.安装vue项目依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 2.安装node服务器依赖
 ```
-npm run serve
+cd ling_server
+
+npm install
 ```
 
-### Compiles and minifies for production
+### 3.运行node服务器
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+node app.js
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 4.退回到vue文件目录，打开vue可视化界面
+```
+vue ui
+```
+
+### 5.导入项目并执行即可看到项目
