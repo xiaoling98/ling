@@ -14,6 +14,7 @@ node app.js
 
 ### 3.回退vue目录启动项目
 ```
+cd ../
 npm run serve
 ```
 
