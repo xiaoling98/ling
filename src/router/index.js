@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../views/login.vue'
-import Home from '../views/home.vue'
-import About from '../components/about.vue'
-import Skill from '../components/skill.vue'
-import Evaluate from '../components/evaluate.vue'
-import Message from '../components/message.vue'
+const Login = () => import('../views/login.vue')
+const Home = () => import('../views/home.vue')
+const About = () => import('../components/about.vue')
+const Skill = () => import('../components/skill.vue')
+const Evaluate = () => import('../components/evaluate.vue')
+const Message = () => import('../components/message.vue')
 
 Vue.use(VueRouter)
 

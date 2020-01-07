@@ -5,20 +5,16 @@
 npm install
 ```
 
-### 2.安装node服务器依赖
+### 2.进入node服务目录，启动node服务
 ```
 cd ling_server
 
-npm install
-```
-
-### 3.运行node服务器
-```
 node app.js
 ```
 
-### 4.退回到vue文件目录，开启本地服务器
+### 3.回退vue目录启动项目
 ```
 npm run serve
 ```
-### 5.进入http://localhost:8080/
+
+### 4.查看http://localhost:8080/
