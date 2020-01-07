@@ -21,4 +21,4 @@ node app.js
 ```
 npm run serve
 ```
-### 5.进入http://localhost:8080/查看项目
+### 5.进入http://localhost:8080/
