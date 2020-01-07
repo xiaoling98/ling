@@ -17,9 +17,8 @@ npm install
 node app.js
 ```
 
-### 4.退回到vue文件目录，打开vue可视化界面
+### 4.退回到vue文件目录，开启本地服务器
 ```
-vue ui
+npm run serve
 ```
-
-### 5.导入项目并执行即可看到项目
+### 5.进入http://localhost:8080/查看项目
