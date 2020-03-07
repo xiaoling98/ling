@@ -7,11 +7,13 @@
       </div>
     </header>
     <main>
-      <div class="nav" :style="{position: isFixded}">
-        <div :class="{navLeft: navShow}" v-if="navShow">@前端小菜鸡</div>
-        <ul class="navList">
-          <li v-for="(item, index) in navlist" :key="item.id" @click="navgo(item.path, index)" :class="{ active: item.isactive }">{{item.authName}}</li>
-        </ul>
+      <div class="place">
+        <div class="nav" :style="{position: isFixded}">
+          <div :class="{navLeft: navShow}" v-if="navShow">@前端小菜鸡</div>
+          <ul class="navList">
+            <li v-for="(item, index) in navlist" :key="item.id" @click="navgo(item.path, index)" :class="{ active: item.isactive }">{{item.authName}}</li>
+          </ul>
+        </div>
       </div>
       <router-view />
     </main>
@@ -34,6 +36,7 @@
                 <div class="text">邮箱</div>
             </div>
             <div class="fa">
+              <div class="contact">不知道写点啥。。</div>
                 <div class="img"><img src="../assets/行业.png" alt=""></div>
                 <div class="text">...</div>
             </div>
@@ -135,6 +138,7 @@ export default {
   }
 }
 .root{
+  width: 100%;
   h2{
     height: 3rem;
     width: 7rem;
@@ -154,7 +158,9 @@ export default {
     z-index: 1;
     overflow: hidden;
     li{
-      float: left;
+      position: absolute;
+      top: 0;
+      width: 100%;
     }
     img{
       width: 100%;
@@ -182,37 +188,43 @@ export default {
   }
 }
 main{
-  .nav{
-  z-index: 2;
-  width: 100%;
-  height: 3rem;
-  display: flex;
-  top: 0;
-  left: 0;
-  justify-content: space-between;
-  line-height: 3rem;
-  background-color: rgb(31, 31, 31);
-  color: #fff;
-  font-size: 12px;
-  .navLeft{
-    flex: 2;
-    padding-left: 1rem;
-  }
-  .navList{
-    display: flex;
-    justify-content: space-around;
-    flex: 3;
-    text-align: center;
-    .active{
-      color: rgb(245, 48, 48);
-    }
-    li{
-      flex:1;
-      cursor: pointer;
-      &:hover{
-        color: rgb(245, 48, 48);
+  .place{
+    width: 100%;
+    height: 3rem;
+    position: relative;
+    .nav{
+      z-index: 2;
+      width: 100%;
+      height: 3rem;
+      position: absolute;
+      display: flex;
+      top: 0;
+      left: 0;
+      justify-content: space-between;
+      line-height: 3rem;
+      background-color: rgb(31, 31, 31);
+      color: #fff;
+      font-size: 12px;
+      .navLeft{
+        flex: 2;
+        padding-left: 1rem;
       }
-    }
+      .navList{
+        display: flex;
+        justify-content: space-around;
+        flex: 3;
+        text-align: center;
+        .active{
+          color: rgb(245, 48, 48);
+        }
+        li{
+          flex:1;
+          cursor: pointer;
+          &:hover{
+            color: rgb(245, 48, 48);
+          }
+        }
+      }
   }
 }
 }
@@ -222,39 +234,38 @@ footer{
   height: 20rem;
   overflow: hidden;
   h2{
+    height: 3rem;
     margin: 0 auto;
   }
   .info{
       width: 100%;
-      height: 100%;
+      height: 17rem;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       text-align: center;
       .fa{
           box-sizing: border-box;
-          padding-top: 10rem;
           height: 100%;
           flex: 1;
           text-align: center;
           color: #000;
-          position: relative;
+          display: flex;
+          flex-direction: column;
           cursor: pointer;
           &:hover .contact{
-          opacity: 1;
-          transform: opacity;
+            opacity: 1;
+            transform: opacity;
           }
           .img{
             height: 4.2rem;
           }
           .contact{
-            position: absolute;
             height: 10rem;
             opacity: 0;
-            transform: translate(70%, -110%);
+            // transform: translate(70%, -110%);
             transition: all 0.7s;
             font-size: 12px;
-            border: 3px solid rgb(206, 67, 199);
             line-height: 10rem;
             &::after{
               content: '';
@@ -273,17 +284,4 @@ footer{
   }
 }
 }
-@media screen and (max-width: 420px) {
-        //微调底部图片显示位置
-         .fa{
-           &:hover .contact{
-             opacity: 1;
-             transform: opacity !important;
-           }
-           .contact{
-             opacity: 0;
-             transform: translate(0, -110%) !important;
-           }
-         }
-    }
 </style>

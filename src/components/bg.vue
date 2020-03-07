@@ -71,6 +71,7 @@ ul {
   // transform: rotateY(50deg);
 
   li {
+    box-sizing: border-box;
     width: 20%;
     height: 100%;
     position: relative;
@@ -98,12 +99,13 @@ ul {
     }
   }
   span {
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
     position: absolute;
     background-position: center;
     //background-repeat: repeat-X;
-    background-size: cover;
+    background-size:cover;
     &:nth-of-type(1) {
       transform: translateZ(300px);
     }
